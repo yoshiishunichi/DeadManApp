@@ -11,6 +11,8 @@ class ResultViewController: UIViewController{
     
     @IBOutlet weak var resultImageView: UIImageView!
     var resultImage = UIImage(named: "defaultImage")
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,14 @@ class ResultViewController: UIViewController{
         resultImageView.layer.borderWidth = 1
         
         resultImageView.image = resultImage
+        
+        saveButton.layer.cornerRadius = 10
+        saveButton.layer.borderColor = UIColor.gray.cgColor
+        saveButton.layer.borderWidth = 1
+        
+        shareButton.layer.cornerRadius = 10
+        shareButton.layer.borderColor = UIColor.gray.cgColor
+        shareButton.layer.borderWidth = 1
 
     }
 }
