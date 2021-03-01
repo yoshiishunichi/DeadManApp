@@ -109,10 +109,10 @@
 			};
 			buildConfigurationList = CABCDFB225E7DDB800888078 /* Build configuration list for PBXProject "DeadManApp" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = Japanese;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				ja,
 				Base,
 			);
 			mainGroup = CABCDFAE25E7DDB800888078;
