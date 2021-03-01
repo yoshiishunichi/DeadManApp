@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iCJ-m7-mp4">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MYh-vF-IFS">
+            <objects>
+                <navigationController id="iCJ-m7-mp4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B1t-ha-djj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Kh-w1-7V7" kind="relationship" relationship="rootViewController" id="tpV-Fl-cAo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjw-0I-igH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2994" y="-50"/>
+        </scene>
+        <!--画像選択-->
+        <scene sceneID="F9r-gG-xgn">
+            <objects>
+                <viewController storyboardIdentifier="SelectImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Kh-w1-7V7" customClass="SelectImageViewController" customModule="DeadManApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SqV-AT-4cX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Wc-rD-Ix4">
+                                <rect key="frame" x="89" y="64" width="142" height="142"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Wc-rD-Ix4" secondAttribute="height" multiplier="1:1" id="hZB-S4-LL6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="487-I7-fIb">
+                                <rect key="frame" x="60" y="226" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.22132457389999999" green="0.37033571900000001" blue="0.69637698729999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="92d-u2-vy9"/>
+                                    <constraint firstAttribute="height" constant="30" id="BSK-1y-N1n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="画像を選択する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSelectButton:" destination="8Kh-w1-7V7" eventType="touchUpInside" id="4PD-wY-jfE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-82-6d7">
+                                <rect key="frame" x="60" y="281" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.2196078431372549" green="0.36862745098039218" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ppp-Id-cnB"/>
+                                    <constraint firstAttribute="height" constant="30" id="eJX-Ew-DaE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="この画像にする">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapDecideButton:" destination="8Kh-w1-7V7" eventType="touchUpInside" id="xeA-Sm-qYb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4i3-Um-GHw"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="487-I7-fIb" firstAttribute="top" secondItem="1Wc-rD-Ix4" secondAttribute="bottom" constant="20" id="Jci-lW-9wZ"/>
+                            <constraint firstItem="1Wc-rD-Ix4" firstAttribute="height" secondItem="SqV-AT-4cX" secondAttribute="height" multiplier="0.25" id="KMT-DW-q5f"/>
+                            <constraint firstItem="d0a-82-6d7" firstAttribute="centerX" secondItem="SqV-AT-4cX" secondAttribute="centerX" id="Quq-jt-a0o"/>
+                            <constraint firstItem="1Wc-rD-Ix4" firstAttribute="top" secondItem="4i3-Um-GHw" secondAttribute="top" constant="20" id="SP0-E2-foR"/>
+                            <constraint firstItem="d0a-82-6d7" firstAttribute="top" secondItem="487-I7-fIb" secondAttribute="bottom" constant="25" id="YwI-NI-DJ5"/>
+                            <constraint firstItem="1Wc-rD-Ix4" firstAttribute="centerX" secondItem="SqV-AT-4cX" secondAttribute="centerX" id="rpP-Ic-kxu"/>
+                            <constraint firstItem="487-I7-fIb" firstAttribute="centerX" secondItem="SqV-AT-4cX" secondAttribute="centerX" id="wyL-6b-gvj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="画像選択" id="DxR-MK-yQT"/>
+                    <connections>
+                        <outlet property="decideButton" destination="d0a-82-6d7" id="YWz-hu-TlG"/>
+                        <outlet property="sampleImageView" destination="1Wc-rD-Ix4" id="Izc-Ue-mnI"/>
+                        <outlet property="selectButton" destination="487-I7-fIb" id="9Ed-b5-qVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyb-EW-c6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2288" y="-51"/>
+        </scene>
+    </scenes>
+</document>

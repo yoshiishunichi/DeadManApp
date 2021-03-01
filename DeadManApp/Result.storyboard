@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result View Controller-->
+        <scene sceneID="OMO-7u-ZTs">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GRs-HC-1vK" customClass="ResultViewController" customModule="DeadManApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gou-7X-BlO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpx-Tr-i6N">
+                                <rect key="frame" x="0.0" y="84" width="414" height="476"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MyO-cD-GlW">
+                                        <rect key="frame" x="77.5" y="140" width="259" height="259"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MyO-cD-GlW" secondAttribute="height" multiplier="1:1" id="NpQ-Qo-YtY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame" translatesAutoresizingMaskIntoConstraints="NO" id="GIc-JT-Dng">
+                                        <rect key="frame" x="0.0" y="14.5" width="414" height="461.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GIc-JT-Dng" secondAttribute="height" multiplier="1256:1400" id="0QB-Ed-JYZ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kpx-Tr-i6N" secondAttribute="height" multiplier="1:1.15" id="5KI-Zg-rgl"/>
+                                    <constraint firstItem="MyO-cD-GlW" firstAttribute="height" secondItem="Kpx-Tr-i6N" secondAttribute="height" multiplier="0.24" constant="144.80000000000001" id="6do-gx-n5L"/>
+                                    <constraint firstItem="GIc-JT-Dng" firstAttribute="centerX" secondItem="Kpx-Tr-i6N" secondAttribute="centerX" id="Iqy-Vx-xxH"/>
+                                    <constraint firstAttribute="bottom" secondItem="GIc-JT-Dng" secondAttribute="bottom" id="evz-fg-ozE"/>
+                                    <constraint firstItem="GIc-JT-Dng" firstAttribute="width" secondItem="Kpx-Tr-i6N" secondAttribute="width" id="lcW-Gh-9Pu"/>
+                                    <constraint firstItem="MyO-cD-GlW" firstAttribute="centerX" secondItem="Kpx-Tr-i6N" secondAttribute="centerX" id="r2b-2d-Dt9"/>
+                                    <constraint firstItem="MyO-cD-GlW" firstAttribute="top" secondItem="Kpx-Tr-i6N" secondAttribute="top" constant="140" id="u4D-EX-foe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ulp-IS-XMN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kpx-Tr-i6N" firstAttribute="width" secondItem="gou-7X-BlO" secondAttribute="width" id="Ntu-W7-TRV"/>
+                            <constraint firstItem="Kpx-Tr-i6N" firstAttribute="top" secondItem="Ulp-IS-XMN" secondAttribute="top" constant="40" id="YCx-vA-Teh"/>
+                            <constraint firstItem="Kpx-Tr-i6N" firstAttribute="centerX" secondItem="gou-7X-BlO" secondAttribute="centerX" id="vnk-zm-sXj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="MyO-cD-GlW" id="Hop-Os-3SU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJb-Dz-41K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="-461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame" width="628" height="700"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
