@@ -76,7 +76,7 @@ class ResultViewController: UIViewController{
         
         alertController.addAction(UIAlertAction(title:"OK", style:.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
-
+        
         
     }
     
@@ -96,14 +96,14 @@ class ResultViewController: UIViewController{
         
         // 除外するActivityType
         let excludedActivityTypes: Array<UIActivity.ActivityType> = [
-             UIActivity.ActivityType.addToReadingList,
+            UIActivity.ActivityType.addToReadingList,
             // UIActivity.ActivityType.airDrop,
-             UIActivity.ActivityType.assignToContact,
-             UIActivity.ActivityType.copyToPasteboard,
-             UIActivity.ActivityType.mail,
-             UIActivity.ActivityType.message,
-             UIActivity.ActivityType.openInIBooks,
-             UIActivity.ActivityType.postToFacebook,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.copyToPasteboard,
+            UIActivity.ActivityType.mail,
+            UIActivity.ActivityType.message,
+            UIActivity.ActivityType.openInIBooks,
+            UIActivity.ActivityType.postToFacebook,
             UIActivity.ActivityType.postToFlickr,
             UIActivity.ActivityType.postToTencentWeibo,
             // UIActivity.ActivityType.postToTwitter,
@@ -117,7 +117,7 @@ class ResultViewController: UIViewController{
         controller.excludedActivityTypes = excludedActivityTypes
         
         self.present(controller, animated: true, completion: nil)
-
+        
     }
     
     @IBAction func tapShareButton(_ sender: Any) {
