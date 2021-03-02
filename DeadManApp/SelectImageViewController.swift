@@ -48,13 +48,13 @@ class SelectImageViewController: UIViewController, UIImagePickerControllerDelega
         
         navigationController?.pushViewController(resultViewController, animated: true)
         let sampleImage = sampleImageView.image ?? UIImage(named: "defaultImage")
-        let monoImage = toMonokuro(colorImage: sampleImage!)
+        let monoImage = toMonokuro(sampleImage!)
         
         resultViewController.resultImage = monoImage
         
     }
     
-    func toMonokuro(colorImage: UIImage) -> UIImage{
+    func toMonokuro(_ colorImage: UIImage) -> UIImage{
         
         let ciImage = CIImage(image: colorImage)
         let filter = CIFilter(name: "CIPhotoEffectMono")!
