@@ -86,7 +86,44 @@ class ResultViewController: UIViewController{
         
     }
     
+    // UIImageを文面と共にシェア
+    func share(_ view: UIView){
+        
+        let image: UIImage = viewToImage(view)
+        let controller = UIActivityViewController(activityItems: [image, "”遺影メーカー”で遺影を作りました。\n#遺影メーカー"], applicationActivities: nil)
+        controller.popoverPresentationController?.sourceView = self.view
+        controller.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+        
+        // 除外するActivityType
+        let excludedActivityTypes: Array<UIActivity.ActivityType> = [
+             UIActivity.ActivityType.addToReadingList,
+            // UIActivity.ActivityType.airDrop,
+             UIActivity.ActivityType.assignToContact,
+             UIActivity.ActivityType.copyToPasteboard,
+             UIActivity.ActivityType.mail,
+             UIActivity.ActivityType.message,
+             UIActivity.ActivityType.openInIBooks,
+             UIActivity.ActivityType.postToFacebook,
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToTencentWeibo,
+            // UIActivity.ActivityType.postToTwitter,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.print,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.markupAsPDF
+        ]
+        
+        controller.excludedActivityTypes = excludedActivityTypes
+        
+        self.present(controller, animated: true, completion: nil)
+
+    }
+    
     @IBAction func tapShareButton(_ sender: Any) {
+        
+        share(imageHoldView)
+        
     }
     
 }
