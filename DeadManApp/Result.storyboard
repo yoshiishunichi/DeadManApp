@@ -67,6 +67,9 @@
                                 <state key="normal" title="保存">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapSaveButton:" destination="GRs-HC-1vK" eventType="touchUpInside" id="faY-EV-FdB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-0l-rfa">
                                 <rect key="frame" x="228.5" y="492.5" width="165.5" height="40"/>
@@ -75,6 +78,9 @@
                                 <state key="normal" title="シェア">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapShareButton:" destination="GRs-HC-1vK" eventType="touchUpInside" id="eE6-g6-XID"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ulp-IS-XMN"/>
@@ -93,6 +99,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageHoldView" destination="Kpx-Tr-i6N" id="CAB-w9-n1n"/>
                         <outlet property="resultImageView" destination="MyO-cD-GlW" id="Hop-Os-3SU"/>
                         <outlet property="saveButton" destination="TJi-H9-PUc" id="Y6f-q8-dVC"/>
                         <outlet property="shareButton" destination="c7x-0l-rfa" id="sZD-wi-5tN"/>
