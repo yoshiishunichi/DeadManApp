@@ -42,6 +42,7 @@ class ResultViewController: UIViewController{
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         let context: CGContext = UIGraphicsGetCurrentContext()!
+        context.setFillColor(UIColor.clear.cgColor)
         
         view.layer.render(in: context)
         

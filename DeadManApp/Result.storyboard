@@ -57,45 +57,46 @@
                                     <constraint firstItem="GIc-JT-Dng" firstAttribute="width" secondItem="Kpx-Tr-i6N" secondAttribute="width" id="lcW-Gh-9Pu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-H9-PUc">
-                                <rect key="frame" x="20" y="492.5" width="165.5" height="40"/>
-                                <color key="backgroundColor" red="0.22132457389999999" green="0.37033571900000001" blue="0.69637698729999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="NP4-iX-c8u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="保存">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapSaveButton:" destination="GRs-HC-1vK" eventType="touchUpInside" id="faY-EV-FdB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-0l-rfa">
-                                <rect key="frame" x="228.5" y="492.5" width="165.5" height="40"/>
-                                <color key="backgroundColor" red="0.22132457389999999" green="0.37033571900000001" blue="0.69637698729999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="シェア">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapShareButton:" destination="GRs-HC-1vK" eventType="touchUpInside" id="eE6-g6-XID"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LhI-KV-dl5">
+                                <rect key="frame" x="10.5" y="492.5" width="393" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-H9-PUc">
+                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="40"/>
+                                        <color key="backgroundColor" red="0.22132457389999999" green="0.37033571900000001" blue="0.69637698729999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NP4-iX-c8u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="保存">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapSaveButton:" destination="GRs-HC-1vK" eventType="touchUpInside" id="faY-EV-FdB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-0l-rfa">
+                                        <rect key="frame" x="206.5" y="0.0" width="186.5" height="40"/>
+                                        <color key="backgroundColor" red="0.22132457389999999" green="0.37033571900000001" blue="0.69637698729999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="シェア">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapShareButton:" destination="GRs-HC-1vK" eventType="touchUpInside" id="eE6-g6-XID"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ulp-IS-XMN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kpx-Tr-i6N" firstAttribute="top" secondItem="Ulp-IS-XMN" secondAttribute="top" id="2lY-pM-Tjj"/>
-                            <constraint firstItem="c7x-0l-rfa" firstAttribute="height" secondItem="TJi-H9-PUc" secondAttribute="height" id="7SQ-Ez-efa"/>
-                            <constraint firstItem="c7x-0l-rfa" firstAttribute="width" secondItem="gou-7X-BlO" secondAttribute="width" multiplier="0.4" id="G2Z-hk-kod"/>
-                            <constraint firstItem="TJi-H9-PUc" firstAttribute="leading" secondItem="Ulp-IS-XMN" secondAttribute="leading" constant="20" id="GG2-zQ-PBi"/>
-                            <constraint firstItem="Ulp-IS-XMN" firstAttribute="trailing" secondItem="c7x-0l-rfa" secondAttribute="trailing" constant="20" id="Nal-3Q-e6N"/>
+                            <constraint firstItem="LhI-KV-dl5" firstAttribute="width" secondItem="gou-7X-BlO" secondAttribute="width" multiplier="0.95" id="4P4-LA-ce8"/>
+                            <constraint firstItem="LhI-KV-dl5" firstAttribute="top" secondItem="Kpx-Tr-i6N" secondAttribute="bottom" constant="20" id="EcW-nE-V2Y"/>
                             <constraint firstItem="Kpx-Tr-i6N" firstAttribute="width" secondItem="gou-7X-BlO" secondAttribute="width" multiplier="0.9" id="Ntu-W7-TRV"/>
-                            <constraint firstItem="c7x-0l-rfa" firstAttribute="top" secondItem="Kpx-Tr-i6N" secondAttribute="bottom" constant="20" id="frd-9a-jhK"/>
-                            <constraint firstItem="TJi-H9-PUc" firstAttribute="width" secondItem="gou-7X-BlO" secondAttribute="width" multiplier="0.4" id="ohZ-Lo-VDk"/>
+                            <constraint firstItem="LhI-KV-dl5" firstAttribute="centerX" secondItem="gou-7X-BlO" secondAttribute="centerX" id="UJY-pq-ntT"/>
                             <constraint firstItem="Kpx-Tr-i6N" firstAttribute="centerX" secondItem="gou-7X-BlO" secondAttribute="centerX" id="vnk-zm-sXj"/>
-                            <constraint firstItem="TJi-H9-PUc" firstAttribute="top" secondItem="Kpx-Tr-i6N" secondAttribute="bottom" constant="20" id="zgg-Qq-9Qg"/>
                         </constraints>
                     </view>
                     <connections>
