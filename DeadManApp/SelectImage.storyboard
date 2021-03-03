@@ -38,14 +38,24 @@
                                     <constraint firstAttribute="width" secondItem="1Wc-rD-Ix4" secondAttribute="height" multiplier="1:1" id="hZB-S4-LL6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-82-6d7">
+                                <rect key="frame" x="32" y="311" width="256" height="40"/>
+                                <color key="backgroundColor" red="0.2196078431372549" green="0.36862745098039218" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="作成">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapDecideButton:" destination="8Kh-w1-7V7" eventType="touchUpInside" id="xeA-Sm-qYb"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="487-I7-fIb">
-                                <rect key="frame" x="60" y="226" width="200" height="30"/>
+                                <rect key="frame" x="32" y="246" width="256" height="40"/>
                                 <color key="backgroundColor" red="0.22132457389999999" green="0.37033571900000001" blue="0.69637698729999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="92d-u2-vy9"/>
-                                    <constraint firstAttribute="height" constant="30" id="BSK-1y-N1n"/>
+                                    <constraint firstAttribute="height" constant="40" id="BSK-1y-N1n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="画像を選択する">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -53,30 +63,18 @@
                                     <action selector="tapSelectButton:" destination="8Kh-w1-7V7" eventType="touchUpInside" id="4PD-wY-jfE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-82-6d7">
-                                <rect key="frame" x="60" y="281" width="200" height="30"/>
-                                <color key="backgroundColor" red="0.2196078431372549" green="0.36862745098039218" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Ppp-Id-cnB"/>
-                                    <constraint firstAttribute="height" constant="30" id="eJX-Ew-DaE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="この画像にする">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapDecideButton:" destination="8Kh-w1-7V7" eventType="touchUpInside" id="xeA-Sm-qYb"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4i3-Um-GHw"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="487-I7-fIb" firstAttribute="top" secondItem="1Wc-rD-Ix4" secondAttribute="bottom" constant="20" id="Jci-lW-9wZ"/>
+                            <constraint firstItem="487-I7-fIb" firstAttribute="width" secondItem="SqV-AT-4cX" secondAttribute="width" multiplier="0.8" id="BfX-Av-nZr"/>
+                            <constraint firstItem="487-I7-fIb" firstAttribute="top" secondItem="1Wc-rD-Ix4" secondAttribute="bottom" constant="40" id="Jci-lW-9wZ"/>
                             <constraint firstItem="1Wc-rD-Ix4" firstAttribute="height" secondItem="SqV-AT-4cX" secondAttribute="height" multiplier="0.25" id="KMT-DW-q5f"/>
                             <constraint firstItem="d0a-82-6d7" firstAttribute="centerX" secondItem="SqV-AT-4cX" secondAttribute="centerX" id="Quq-jt-a0o"/>
                             <constraint firstItem="1Wc-rD-Ix4" firstAttribute="top" secondItem="4i3-Um-GHw" secondAttribute="top" constant="20" id="SP0-E2-foR"/>
                             <constraint firstItem="d0a-82-6d7" firstAttribute="top" secondItem="487-I7-fIb" secondAttribute="bottom" constant="25" id="YwI-NI-DJ5"/>
+                            <constraint firstItem="d0a-82-6d7" firstAttribute="height" secondItem="487-I7-fIb" secondAttribute="height" id="a9K-1x-taA"/>
+                            <constraint firstItem="d0a-82-6d7" firstAttribute="width" secondItem="487-I7-fIb" secondAttribute="width" id="nKk-l2-cpW"/>
                             <constraint firstItem="1Wc-rD-Ix4" firstAttribute="centerX" secondItem="SqV-AT-4cX" secondAttribute="centerX" id="rpP-Ic-kxu"/>
                             <constraint firstItem="487-I7-fIb" firstAttribute="centerX" secondItem="SqV-AT-4cX" secondAttribute="centerX" id="wyL-6b-gvj"/>
                         </constraints>
