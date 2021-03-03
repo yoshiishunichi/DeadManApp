@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACE2E3300441B1DF683F7745 /* Pods_DeadManApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A1DC9E4F0D590FCD869358 /* Pods_DeadManApp.framework */; };
 		CA838DB125EB8FCF004CA257 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA838DB025EB8FCF004CA257 /* ResultViewController.swift */; };
 		CA838DB425EB8FDF004CA257 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA838DB325EB8FDF004CA257 /* Result.storyboard */; };
 		CA838DB925EB914B004CA257 /* SelectImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA838DB825EB914B004CA257 /* SelectImage.storyboard */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C728E68C6E3609B7CA09287 /* Pods-DeadManApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeadManApp.debug.xcconfig"; path = "Target Support Files/Pods-DeadManApp/Pods-DeadManApp.debug.xcconfig"; sourceTree = "<group>"; };
+		46569FB8B39EE44B9E99F118 /* Pods-DeadManApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeadManApp.release.xcconfig"; path = "Target Support Files/Pods-DeadManApp/Pods-DeadManApp.release.xcconfig"; sourceTree = "<group>"; };
+		78A1DC9E4F0D590FCD869358 /* Pods_DeadManApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeadManApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA838DB025EB8FCF004CA257 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CA838DB325EB8FDF004CA257 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		CA838DB825EB914B004CA257 /* SelectImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectImage.storyboard; sourceTree = "<group>"; };
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE2E3300441B1DF683F7745 /* Pods_DeadManApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FFC039AA468FACBF8CD6E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78A1DC9E4F0D590FCD869358 /* Pods_DeadManApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD93E4E184BDDE4BAAE3CB9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C728E68C6E3609B7CA09287 /* Pods-DeadManApp.debug.xcconfig */,
+				46569FB8B39EE44B9E99F118 /* Pods-DeadManApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CABCDFAE25E7DDB800888078 = {
 			isa = PBXGroup;
 			children = (
 				CABCDFB925E7DDB900888078 /* DeadManApp */,
 				CABCDFB825E7DDB900888078 /* Products */,
+				BD93E4E184BDDE4BAAE3CB9A /* Pods */,
+				3FFC039AA468FACBF8CD6E5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CABCDFCB25E7DDBA00888078 /* Build configuration list for PBXNativeTarget "DeadManApp" */;
 			buildPhases = (
+				E1E50781F9F00845E666B81B /* [CP] Check Pods Manifest.lock */,
 				CABCDFB325E7DDB800888078 /* Sources */,
 				CABCDFB425E7DDB800888078 /* Frameworks */,
 				CABCDFB525E7DDB800888078 /* Resources */,
+				2218B104373BBE4C6B77BC25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2218B104373BBE4C6B77BC25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeadManApp/Pods-DeadManApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeadManApp/Pods-DeadManApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeadManApp/Pods-DeadManApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1E50781F9F00845E666B81B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeadManApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CABCDFB325E7DDB800888078 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		CABCDFCC25E7DDBA00888078 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C728E68C6E3609B7CA09287 /* Pods-DeadManApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		CABCDFCD25E7DDBA00888078 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46569FB8B39EE44B9E99F118 /* Pods-DeadManApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

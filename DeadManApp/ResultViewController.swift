@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ResultViewController: UIViewController{
+class ResultViewController: UIViewController, GADFullScreenContentDelegate {
+    
+    let interstitialADTestUnitID = "ca-app-pub-3940256099942544/4411468910"
+    var interstitialAd: GADInterstitialAd!
     
     @IBOutlet weak var imageHoldView: UIView!
     @IBOutlet weak var resultImageView: UIImageView!
@@ -17,6 +21,15 @@ class ResultViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let interstitialAdUnitID  = interstitialADTestUnitID
+        GADInterstitialAd.load(withAdUnitID: interstitialAdUnitID, request: GADRequest()) { ad, error in
+            
+            if error != nil { return }
+            self.interstitialAd = ad
+            self.interstitialAd.fullScreenContentDelegate = self
+            
+        }
         
         navigationItem.title = "完成"
         
@@ -42,14 +55,13 @@ class ResultViewController: UIViewController{
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         let context: CGContext = UIGraphicsGetCurrentContext()!
-
+        
         view.layer.render(in: context)
         
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        // 追加：そのまま保存するとJPGで保存される様なので、PNGに変換する
-        // ※JPGは透過をサポートしてないので変換する
+        // pngに変換
         let pngData = image.pngData()!
         let pngImage = UIImage.init(data: pngData)!
         return pngImage
@@ -70,6 +82,7 @@ class ResultViewController: UIViewController{
         var title = "保存完了"
         var message = "カメラロールに保存しました！"
         
+        
         if error != nil{
             title = "エラー"
             message = "カメラロールに保存できませんでした"
@@ -77,10 +90,29 @@ class ResultViewController: UIViewController{
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alertController.addAction(UIAlertAction(title:"OK", style:.default, handler: nil))
+        if error != nil{
+            alertController.addAction(UIAlertAction(title:"OK", style:.default, handler:nil))
+        }
+        else{
+            alertController.addAction(UIAlertAction(title:"OK", style:.default,
+                                                    handler: {(UIAlertAction) in self.showAd()}))
+        }
+
+        
         self.present(alertController, animated: true, completion: nil)
         
-        
+    }
+    
+    func showAd(){
+        do {
+            try self.interstitialAd.canPresent(fromRootViewController: self)
+            self.interstitialAd.present(fromRootViewController: self)
+
+        } catch {
+
+            print("表示しない")
+
+        }
     }
     
     @IBAction func tapSaveButton(_ sender: Any) {
