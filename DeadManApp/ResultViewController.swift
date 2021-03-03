@@ -42,15 +42,17 @@ class ResultViewController: UIViewController{
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         let context: CGContext = UIGraphicsGetCurrentContext()!
-        context.setFillColor(UIColor.clear.cgColor)
-        
+
         view.layer.render(in: context)
         
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        
         UIGraphicsEndImageContext()
         
-        return image
+        // 追加：そのまま保存するとJPGで保存される様なので、PNGに変換する
+        // ※JPGは透過をサポートしてないので変換する
+        let pngData = image.pngData()!
+        let pngImage = UIImage.init(data: pngData)!
+        return pngImage
     }
     
     // viewをimageに変換してカメラロールに保存
