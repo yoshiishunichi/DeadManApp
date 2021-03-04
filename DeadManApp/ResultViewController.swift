@@ -10,8 +10,8 @@ import GoogleMobileAds
 
 class ResultViewController: UIViewController, GADFullScreenContentDelegate {
     
-    let interstitialADTestUnitID = "ca-app-pub-3940256099942544/4411468910"
-    var interstitialAd: GADInterstitialAd!
+//    let interstitialADTestUnitID = "ca-app-pub-3940256099942544/4411468910"
+//    var interstitialAd: GADInterstitialAd!
     
     @IBOutlet weak var imageHoldView: UIView!
     @IBOutlet weak var resultImageView: UIImageView!
@@ -22,15 +22,15 @@ class ResultViewController: UIViewController, GADFullScreenContentDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let interstitialAdUnitID  = interstitialADTestUnitID
-        GADInterstitialAd.load(withAdUnitID: interstitialAdUnitID, request: GADRequest()) { ad, error in
-            
-            if error != nil { return }
-            self.interstitialAd = ad
-            self.interstitialAd.fullScreenContentDelegate = self
-            
-        }
-        
+//        let interstitialAdUnitID  = interstitialADTestUnitID
+//        GADInterstitialAd.load(withAdUnitID: interstitialAdUnitID, request: GADRequest()) { ad, error in
+//
+//            if error != nil { return }
+//            self.interstitialAd = ad
+//            self.interstitialAd.fullScreenContentDelegate = self
+//
+//        }
+//
         navigationItem.title = "完成"
         
         resultImageView.layer.borderColor = UIColor.gray.cgColor
@@ -90,31 +90,32 @@ class ResultViewController: UIViewController, GADFullScreenContentDelegate {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        if error != nil{
-            alertController.addAction(UIAlertAction(title:"OK", style:.default, handler:nil))
-        }
-        else{
-            alertController.addAction(UIAlertAction(title:"OK", style:.default,
-                                                    handler: {(UIAlertAction) in self.showAd()}))
-        }
+//        if error != nil{
+//            alertController.addAction(UIAlertAction(title:"OK", style:.default, handler:nil))
+//        }
+//        else{
+//            alertController.addAction(UIAlertAction(title:"OK", style:.default,
+//                                                    handler: {(UIAlertAction) in self.showAd()}))
+//        }
 
+        alertController.addAction(UIAlertAction(title:"OK", style:.default, handler:nil))
         
         self.present(alertController, animated: true, completion: nil)
         
     }
     
-    func showAd(){
-        do {
-            try self.interstitialAd.canPresent(fromRootViewController: self)
-            self.interstitialAd.present(fromRootViewController: self)
-
-        } catch {
-
-            print("表示しない")
-
-        }
-    }
-    
+//    func showAd(){
+//        do {
+//            try self.interstitialAd.canPresent(fromRootViewController: self)
+//            self.interstitialAd.present(fromRootViewController: self)
+//
+//        } catch {
+//
+//            print("表示しない")
+//
+//        }
+//    }
+//
     @IBAction func tapSaveButton(_ sender: Any) {
         
         saveImage(imageHoldView)
